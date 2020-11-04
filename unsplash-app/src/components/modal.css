@@ -1,0 +1,35 @@
+#modal button,
+.details button {
+}
+
+#modal {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MDN https://developer.mozilla.org/en-US/docs/Web/CSS/:empty#:~:text=The%20%3Aempty%20CSS%20pseudo%2Dclass,an%20element%20is%20considered%20empty.
+The :empty CSS pseudo-class represents any element that has no children. 
+Children can be either element nodes or text (including whitespace). Comments, processing instructions, 
+and CSS content do not affect whether an element is considered empty.
+(:
+*/
+#modal:empty {
+  display: none;
+}
+
+#modal > div {
+  background-color: white;
+  max-width: 500px;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
