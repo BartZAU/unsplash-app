@@ -53,15 +53,15 @@ class App extends Component {
     const { results } = result;
     const { searchKey, images } = this.state;
 
-    const savedImgs =
+    const previousSavedSearch =
       images && images[searchKey] ? images[searchKey].results : [];
 
-    const updatedHits = [...savedImgs, ...results];
+    const updatedSearch = [...previousSavedSearch, ...results];
 
     this.setState({
       images: {
         ...images,
-        [searchKey]: { results: updatedHits, page },
+        [searchKey]: { results: updatedSearch, page },
       },
       loading: false,
     });
